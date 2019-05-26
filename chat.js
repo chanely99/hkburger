@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  $('.send').click(function(){ 
+  $('.send').click(function(){
     var toSend = $('input[name=text]').val();
     var toReply = "aaa";//$('greeting').val();
-    
+
     if(toSend == "hello"){
       toReply = "Hello, I am a burger";
     }
@@ -31,9 +31,9 @@ $(document).ready(function(){
     }
 
     $('.conversation').append("<p class='message'>" + toSend + "</p>");
-    
+
     $('.conversation').append("<p class='reply'>" + toReply + "</p>"+ "<br>");
-    
+
     $('input[name=text]').val("");
 
   $('span:nth-child(2)').click(function(){
@@ -45,4 +45,7 @@ $(document).ready(function(){
   });
 
   });
+  document.querySelector('#returnBtn').addEventListener("click", e => {
+	  window.location.href="burger.html";
+	});
 });
