@@ -1,6 +1,6 @@
 $(document).ready(function(){
   console.log("help")
-  $('.send').click(function(){ 
+  $('.send').click(function(){
     var toSend = $('input[name=text]').val();
     var toReply = "aaa";//$('greeting').val();
 
@@ -29,10 +29,10 @@ $(document).ready(function(){
       toReply = "If you were a burger you would be a McGorgeous"
     }
     $('.conversation').append("<p class='message'>" + toSend + "</p>");
-    
-    
+
+
     $('.conversation').append("<p class='reply'>" + toReply + "</p>");
-    
+
   $('span:nth-child(2)').click(function(){
     console.log("return to swiping");
   });
@@ -40,6 +40,8 @@ $(document).ready(function(){
     console.log("opening new window");
     window.open("https://www.google.com/maps/search/burgers/@34.0721212,-118.4584885,15z/data=!3m1!4b1!4m8!2m7!3m6!1sburgers!2sCarnesale+Commons,+350+De+Neve+Dr,+Los+Angeles,+CA+90095!3s0x80c2bc8e6a9454d5:0x356ebc68e41eebf5!4m2!1d-118.4497337!2d34.0721215");
   });
-
+  });
 });
-
+document.querySelector('#returnBtn').addEventListener("click", e => {
+  window.location.href="burger.html";
+});
